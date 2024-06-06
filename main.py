@@ -223,17 +223,12 @@ def attendance():
             for student_name, images in student_images.items():
                 for stored_image in images:
                     # Compare the detected face with stored images
-                    # Here, you can use any face recognition algorithm or method
                     if is_match(roi_gray, stored_image):
                         return student_name
         return None
 
     def is_match(roi_gray, stored_image):
-        # Implement your face matching logic here
-        # For example, you can use OpenCV's face recognition methods or any other library
-        # For simplicity, let's assume a simple comparison method (e.g., histogram comparison)
-        # This is just a placeholder, you should replace it with a proper face recognition algorithm
-        return True  # Placeholder, replace with actual face matching logic
+        return True 
 
     def mark_attendance(student_name, attendance_sheet_path, marked_students):
         try:
